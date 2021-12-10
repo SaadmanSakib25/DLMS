@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: shadman_shakib@hotmail.com
+Date: Thu, 24 Sep 2020 14:50:12 -0000
+Message-ID: <160095901233.17728.3401674931309891486@DESKTOP-NO71T2G>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/accounts/reset/MTE/aaq1vo-63163c758fa1a75fb76114a211ae3f0b/
+
+Your username, in case you’ve forgotten: 2016814693
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------

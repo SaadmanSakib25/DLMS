@@ -1,0 +1,38 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1 style= "color:whitesmoke; text-align: center;"> Book Catalogue</h1> <br>
+
+<form class="form" id="searchform" action="{% url 'search_b' %}" method="get">
+
+  <div class="form-group" style="    position: relative; left: 80%;">
+    <input type="text" class="col-4 form-control"  placeholder = "Search by title, author or ISBN" name="q"><br>
+    <button type="button"  class="btn btn-success " onclick="searchform.submit()">Search</button>
+  </div>
+
+</form>
+
+  {% if book_list %}
+
+    <div class="row mx-auto">
+      {% for book in book_list %}
+        <div class="mx-3 col-md-4 col-lg-3 mb-4 shadow p-2 mb-4 bg-white rounded">
+          <div class="card mx-auto text-center">
+            <img class="card-img-top" src="{{ book.book_img.url }}" alt="Sample Title" height="350px" width="150px">
+            <div class="card-body">
+              <h4 class="card-title">    <a href="{{ book.get_absolute_url }}">{{ book.title }}</a> </h4>
+              <h5>By: {{book.author_1}} </h5>
+              {% if book.author_2 %} <h5>{{book.author_2}}</h5> {% endif %}
+              {% if book.author_3 %} <h5>{{book.author_3}}</h5> {% endif %}
+            </div> 
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+
+    {% else %}
+      <p class=" bg bg-white">There are no books.</p>
+    {% endif %}       
+{% endblock %}
+

@@ -1,0 +1,67 @@
+{% extends "base_generic.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <!-- <form action="" method="post" class="form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit"/>
+
+    </form> -->
+
+   <form method="post" class="form" enctype="multipart/form-data">
+        <div class="form-group" style="background-color: rgba(0, 122, 116, 0.3); color:whitesmoke;">
+            {% csrf_token %}
+            <div class="form-row">
+                <div class="form-group col-md-4 mb-0">
+                    {{ form.title|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-3 mb-0">
+                    {{ form.book_id|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-4 mb-0">
+                    {{ form.isbn|as_crispy_field }}
+                  </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4 mb-0">
+                    {{ form.genre|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-3 mb-0">
+                    {{ form.call_number|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-4 mb-0">
+                    {{ form.language|as_crispy_field }}
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-3.5 mb-0">
+                    {{ form.author_1|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-3.5 mb-0">
+                    {{ form.author_2|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-3.5 mb-0">
+                    {{ form.author_3|as_crispy_field }}
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-2.5 mb-0">
+                    {{ form.total_copies|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-2.5 mb-0">
+                    {{ form.available_copies|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-2.5 mb-0">
+                    {{ form.book_img|as_crispy_field }}
+                </div>
+            </div> 
+            <div class="form-row form-group col-md-5 mb-0">
+                {{ form.summary|as_crispy_field }}
+            </div>
+        </div>
+        <input class="btn btn-success" type="submit" value="Submit"/>
+    </form>
+{% endblock %}
