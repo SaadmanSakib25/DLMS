@@ -23,6 +23,7 @@ from django.conf.urls.static import static
 
 from management import views
 from .feed import LatestEntriesFeed
+from fogrobot import views as views2
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -47,6 +48,7 @@ urlpatterns = [
     path('return/<int:pk>', views.ret, name='ret'),
     # path('rating/<int:pk>/update/', views.RatingUpdate, name='rating_update'),
     # path('rating/<int:pk>/delete/', views.RatingDelete, name='rating_delete'),
+    path('receive/', views2.receive_data, name='receive_data'),
 
 
 url(r'^search_b/', views.search_book, name="search_b"),

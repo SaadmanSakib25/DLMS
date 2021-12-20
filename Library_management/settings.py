@@ -24,7 +24,7 @@ SECRET_KEY = '!!n61=9-q!_u=-0kcyu^88$r@2fpm6!b3cnd-5k+h7c$mv7v@$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["192.168.0.111"]
 
 # Application definition
 
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'management',
     'API',
     'crispy_forms',
+    'fogrobot'
 
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
